@@ -19,12 +19,61 @@
             background-color: #f9f9f9;
         }
 
+        /* Background Design */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1953&q=80'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            opacity: 0.9; /* Adjust opacity for better readability */
+        }
+
+        /* Overlay for better readability */
+        header, main, .cta-section, .branches, footer {
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: rgba(0, 123, 255, 0.9); /* Semi-transparent blue background */
+            padding: 10px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffdd57; /* Yellow hover effect */
+        }
+
         /* Header */
         header {
             background: linear-gradient(to right, #007BFF, #00BFFF);
             color: white;
             padding: 20px;
             text-align: center;
+            margin: 0;
+            border-radius: 0;
         }
 
         header img {
@@ -59,24 +108,44 @@
             margin-bottom: 20px;
         }
 
-        .cta-button {
-            background-color: #007BFF;
+        /* CTA Section */
+        .cta-section {
+            padding: 40px 20px;
+            text-align: center;
+            background: rgba(0, 123, 255, 0.9); /* Semi-transparent blue background */
             color: white;
-            padding: 10px 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background-color: #ffdd57; /* Yellow button */
+            color: #333;
+            padding: 15px 30px;
             border: none;
             border-radius: 5px;
-            font-size: 1rem;
+            font-size: 1.2rem;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
 
         .cta-button:hover {
-            background-color: #0056b3;
+            background-color: #ffcc00; /* Darker yellow on hover */
         }
 
         /* Branches Section */
         .branches {
-            background-color: #333;
+            background-color: rgba(51, 51, 51, 0.9); /* Semi-transparent dark background */
             color: white;
             padding: 20px;
             text-align: center;
@@ -102,7 +171,7 @@
 
         /* Footer */
         footer {
-            background-color: #222;
+            background-color: rgba(34, 34, 34, 0.9); /* Semi-transparent dark background */
             color: white;
             padding: 20px;
             text-align: center;
@@ -127,9 +196,22 @@
             margin-top: 10px;
             font-size: 0.9rem;
         }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#services">Services</a>
+        <a href="#promos">Promos</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
     <!-- Header -->
     <header>
@@ -139,31 +221,38 @@
     </header>
 
     <!-- Main Section -->
-    <main>
-        <h2>Discover the Best of the Philippines</h2>
-        <p>From pristine beaches to vibrant cities, we offer unforgettable travel experiences. Check out our exclusive packages and promotions!</p>
-        <button class="cta-button">Book Your Adventure Now</button>
+    <main id="services">
+        <h2>Our Services</h2>
+        <p>Discover the best travel destinations in the Philippines with our exclusive packages and promotions.</p>
+        <p>From pristine beaches to vibrant cities, we offer unforgettable travel experiences.</p>
     </main>
 
-    <!-- Branches Section -->
-    <section class="branches">
-        <h2>Our Branches</h2>
+    <!-- Call-to-Action Section -->
+    <section class="cta-section">
+        <h2>Book Your Next Adventure Today!</h2>
+        <p>Explore the Philippines like never before with our exciting packages. Limited slots available for promo deals. Don't miss out!</p>
+        <button class="cta-button">Book Now</button>
+    </section>
+
+    <!-- Promos Section -->
+    <section class="branches" id="promos">
+        <h2>Special Promos</h2>
         <div class="branch">
-            <h3>Manila Branch</h3>
-            <p>Contact: +63 123 456 7890</p>
+            <h3>Beach Getaway</h3>
+            <p>Enjoy a 7-day beach vacation in Palawan for only ₱15,000 per person!</p>
         </div>
         <div class="branch">
-            <h3>Cebu Branch</h3>
-            <p>Contact: +63 987 654 3210</p>
+            <h3>City Explorer</h3>
+            <p>Explore Manila and Cebu with our 5-day city tour package for ₱10,000 per person.</p>
         </div>
         <div class="branch">
-            <h3>Davao Branch</h3>
-            <p>Contact: +63 555 123 4567</p>
+            <h3>Mountain Adventure</h3>
+            <p>Experience the beauty of the Cordilleras with our 3-day mountain trek for ₱8,000 per person.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer id="contact">
         <h3>Follow Us</h3>
         <p>
             <a href="https://facebook.com">Facebook</a> |
