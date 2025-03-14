@@ -1,16 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Web Page</title>
+    <title>Francis - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <h1>Hi! I am Francis</h1>
-    <h2>HTML Tasks</h2>
-    <ol>
-        <li><a href="TupazExplorePHTours.html" target="_blank">Explore PH Tours</a></li>
-        <li><a href="TupazCourseSchedule.html" target="_blank">2nd Term Course Schedule</a></li>
-    </ol>
+    <!-- Side Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <br>
+            <br>
+            <h1>Menu</h1>
+            <button class="dark-mode-toggle" id="dark-mode-toggle">Toggle Dark Mode</button>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">HTML Tasks</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Button to Toggle Sidebar -->
+    <button id="toggle-btn" class="toggle-btn">Toggle Sidebar</button>
+
+    <!-- Hamburger Menu -->
+    <div class="container">
+        <input class="label-check" id="label-check" type="checkbox">
+        <label for="label-check" class="hamburger-label">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </label>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <!-- Header Section -->
+        <header>
+            <div class="container">
+                <h1>My Web Programming Portfolio</h1>
+                <p>By Francis Elixer Tupaz</p>
+                <p>BS in Information Systems</p>
+            </div>
+        </header>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>
+                    Hi, I'm Francis, a web developer passionate about creating interactive and user-friendly websites.
+                    I specialize in HTML, CSS, JavaScript, and more. Welcome to my portfolio!
+                </p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2>HTML Tasks</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>Explore PH Tours</h3>
+                        <p>Discover the beauty of the Philippines.</p>
+                        <a href="TupazExplorePHTours.html" target="_blank" class="btn">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>2nd Term Course Schedule</h3>
+                        <p>View my academic schedule.</p>
+                        <a href="TupazCourseSchedule.html" target="_blank" class="btn">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contact</h2>
+                <p>Feel free to reach out for collaborations or inquiries.</p>
+                <a href="mailto:your.email@example.com" class="btn">Email Me</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Francis. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    
 </body>
+
 </html>
