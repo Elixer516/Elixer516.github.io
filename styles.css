@@ -156,10 +156,14 @@ header p {
 }
 
 .section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #ff6b6b;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #333;
+    border-bottom: 3px solid #ff6b6b;
+    display: inline-block;
+    padding-bottom: 5px;
 }
+
 
 .section p {
     font-size: 1.1rem;
@@ -174,11 +178,14 @@ header p {
 }
 
 .project-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    border: 1px solid #ddd;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 body.dark-mode .project-card {
@@ -187,8 +194,9 @@ body.dark-mode .project-card {
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #ffefef, #fff5f5);
 }
 
 .project-card h3 {
@@ -203,16 +211,19 @@ body.dark-mode .project-card {
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 24px;
+    font-weight: bold;
     background-color: #ff6b6b;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .btn:hover {
     background-color: #ff4c4c;
+    transform: scale(1.05);
 }
 
 /* Footer */
